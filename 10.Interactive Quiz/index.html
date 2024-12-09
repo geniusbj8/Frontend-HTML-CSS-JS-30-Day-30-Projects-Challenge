@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-container">
+    <h1>General Knowledge Quiz</h1>
+
+    <div id="quiz">
+      <div class="question-container">
+        <p id="question-text">What is the capital of France?</p>
+      </div>
+
+      <div class="options-container">
+        <div>
+          <input type="radio" name="option" value="0" id="option-0">
+          <label for="option-0">London</label>
+        </div>
+
+        <div>
+          <input type="radio" name="option" value="1" id="option-1">
+          <label for="option-1">Paris</label>
+        </div>
+
+        <div>
+          <input type="radio" name="option" value="2" id="option-2">
+          <label for="option-2">Berlin</label>
+        </div>
+
+        <div>
+          <input type="radio" name="option" value="3" id="option-3">
+          <label for="option-3">Madrid</label>
+        </div>
+      </div>
+
+      <button id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+
+    <div id="result" class="result-container">
+      <p>Your score: <span id="score"></span> / 5</p>
+      <button onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

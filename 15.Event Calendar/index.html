@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar">
+    <header>
+      <h1 id="monthYear">Event Calendar</h1>
+      <div class="navigation">
+        <button id="prevMonth">&lt;</button>
+        <button id="nextMonth">&gt;</button>
+      </div>
+    </header>
+    <div class="days">
+      <div class="day">Sun</div>
+      <div class="day">Mon</div>
+      <div class="day">Tue</div>
+      <div class="day">Wed</div>
+      <div class="day">Thu</div>
+      <div class="day">Fri</div>
+      <div class="day">Sat</div>
+    </div>
+    <div id="dates" class="dates"></div>
+  </div>
+
+  <!-- Modal for adding/editing events -->
+  <div id="eventModal" class="modal">
+    <div class="modal-content">
+      <h2>Add/Edit Event</h2>
+      <textarea id="eventDescription" placeholder="Describe your event..."></textarea>
+      <div class="modal-actions">
+        <button id="saveEvent">Save Event</button>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

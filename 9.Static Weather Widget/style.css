@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Widget Container */
+.widget-container {
+  width: 100%;
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+/* Weather Widget */
+.weather-widget {
+  padding: 20px;
+  color: #333;
+}
+
+/* Location */
+.location h2 {
+  font-size: 24px;
+  color: #4a90e2;
+}
+
+/* Temperature */
+.temperature h3 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #f39c12;
+}
+
+/* Weather Condition */
+.weather-condition {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.weather-condition i {
+  font-size: 24px;
+  color: #f39c12;
+  margin-right: 8px;
+}
+
+.weather-condition span {
+  color: #333;
+}
+
+/* Additional Info */
+.additional-info {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.additional-info div {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.additional-info i {
+  margin-right: 8px;
+  font-size: 18px;
+  color: #3498db;
+}
+
+.additional-info span {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .widget-container {
+    width: 90%;
+  }
+
+  .temperature h3 {
+    font-size: 36px;
+  }
+}

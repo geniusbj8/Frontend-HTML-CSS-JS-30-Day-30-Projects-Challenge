@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">My Tailwind Page</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600">About</a></li>
+        <li><a href="#services" class="hover:text-blue-600">Services</a></li>
+        <li><a href="#gallery" class="hover:text-blue-600">Gallery</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
+  <section id="home" class="bg-blue-600 text-white py-20 text-center">
+    <h2 class="text-4xl font-bold mb-4">Welcome to My Tailwind CSS Page</h2>
+    <p class="text-lg mb-8">Explore advanced layouts and responsive designs with Tailwind CSS.</p>
+    <a href="#about" class="bg-white text-blue-600 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">Learn More</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold mb-6 text-center">About Us</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+        <p class="text-gray-700">We aim to provide exceptional services and inspire innovation using cutting-edge technology like Tailwind CSS.</p>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-4">Our Vision</h3>
+        <p class="text-gray-700">To empower developers with simple yet powerful design solutions that transform web experiences.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-6 text-center">Our Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
+          <h3 class="text-xl font-bold mb-4">Web Development</h3>
+          <p>Build modern and responsive websites with ease.</p>
+        </div>
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
+          <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+          <p>Create user-friendly designs for apps and websites.</p>
+        </div>
+        <div class="bg-white p-6 shadow-lg rounded-lg hover:shadow-2xl transition duration-300">
+          <h3 class="text-xl font-bold mb-4">SEO Optimization</h3>
+          <p>Improve your website's ranking on search engines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="container mx-auto px-4 py-16">
+    <h2 class="text-3xl font-semibold mb-6 text-center">Gallery</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <img src="images/thumbnail-1.webp" alt="Image 1" class="rounded-lg shadow-md hover:shadow-lg">
+      <img src="images/thumbnail-2.webp" alt="Image 2" class="rounded-lg shadow-md hover:shadow-lg">
+      <img src="images/thumbnail-3.webp" alt="Image 3" class="rounded-lg shadow-md hover:shadow-lg">
+      <img src="images/thumbnail-4.webp" alt="Image 4" class="rounded-lg shadow-md hover:shadow-lg">
+      <img src="images/thumbnail-5.webp" alt="Image 5" class="rounded-lg shadow-md hover:shadow-lg">
+      <img src="images/thumbnail-6.webp" alt="Image 6" class="rounded-lg shadow-md hover:shadow-lg">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-blue-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Get in Touch</h2>
+      <p class="mb-8">We'd love to hear from you. Fill out the form below!</p>
+      <form class="max-w-md mx-auto">
+        <input type="text" placeholder="Name" class="w-full mb-4 p-2 rounded" required>
+        <input type="email" placeholder="Email" class="w-full mb-4 p-2 rounded" required>
+        <textarea placeholder="Message" class="w-full mb-4 p-2 rounded" rows="4"></textarea>
+        <button type="submit" class="bg-white text-blue-600 py-2 px-4 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 My Tailwind Page. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>

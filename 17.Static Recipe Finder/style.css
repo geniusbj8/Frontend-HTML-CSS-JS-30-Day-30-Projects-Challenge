@@ -1,0 +1,38 @@
+/* Custom Styles */
+body {
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background: linear-gradient(90deg, hsla(333, 100%, 53%, 1) 0%, hsla(33, 94%, 57%, 1) 100%);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal img {
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller devices */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

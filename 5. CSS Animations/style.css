@@ -1,0 +1,59 @@
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Button Animation */
+.animated-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.animated-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1); /* Slightly enlarge */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Animation */
+.animated-image {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.4s ease-in-out, filter 0.3s;
+}
+
+.animated-image:hover {
+  transform: scale(1.1) rotate(5deg); /* Zoom and rotate */
+  filter: brightness(1.1);
+}
+
+/* Keyframes Animation for Button */
+@keyframes buttonBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply Keyframes Animation on Hover */
+.animated-button:hover {
+  animation: buttonBounce 0.5s;
+}

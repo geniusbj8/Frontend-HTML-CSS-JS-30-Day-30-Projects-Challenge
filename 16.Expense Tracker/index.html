@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <!-- Form to add expense -->
+    <div class="form">
+      <input type="text" id="expenseName" placeholder="Expense Name" required>
+      <input type="number" id="expenseAmount" placeholder="Amount in Ksh" required>
+      <button id="addExpenseBtn">Add Expense</button>
+    </div>
+
+    <!-- List of expenses -->
+    <div class="expense-list">
+      <ul id="expenseList"></ul>
+    </div>
+
+    <!-- Total -->
+    <div class="total">
+      <h3>Total Expenses: Ksh <span id="totalAmount">0.00</span></h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

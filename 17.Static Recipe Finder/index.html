@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Finder</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons"></script> <!-- For icons -->
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header Section -->
+  <header class="text-center py-12 bg-gradient-to-r from-[#FF0F7B] to-[#F89B29] text-white">
+    <h1 class="text-4xl font-bold">Recipe Finder</h1>
+    <p class="text-lg mt-4">Find your next delicious recipe!</p>
+  </header>
+
+  <!-- Search Section -->
+  <section class="text-center py-8">
+    <input type="text" id="search" placeholder="Search for a recipe..." class="w-4/5 sm:w-1/2 md:w-1/3 p-3 rounded-xl border-2 border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+  </section>
+
+  <!-- Recipe Cards Section -->
+  <section class="py-12 px-4">
+    <h2 class="text-3xl font-semibold text-center mb-8">Popular Recipes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <!-- Recipe Card 1 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="images/Spaghetti Carbonara.jpeg" alt="Spaghetti Carbonara" class="rounded-t-lg w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Spaghetti Carbonara</h3>
+        <p class="text-gray-600 mb-4">A classic Italian pasta dish with eggs, cheese, pancetta, and pepper.</p>
+        <button onclick="openModal('carbonaraModal')" class="text-blue-600 hover:underline">
+          <span data-feather="info" class="inline-block mr-2"></span> View Recipe
+        </button>
+      </div>
+
+      <!-- Recipe Card 2 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="images/Chicken Alfredo.jpeg" alt="Chicken Alfredo" class="rounded-t-lg w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Chicken Alfredo</h3>
+        <p class="text-gray-600 mb-4">A creamy and savory pasta dish with grilled chicken and Alfredo sauce.</p>
+        <button onclick="openModal('alfredoModal')" class="text-blue-600 hover:underline">
+          <span data-feather="info" class="inline-block mr-2"></span> View Recipe
+        </button>
+      </div>
+
+      <!-- Recipe Card 3 -->
+      <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="images/Vegetable Stir Fry.jpeg" alt="Vegetable Stir Fry" class="rounded-t-lg w-full h-40 object-cover mb-4">
+        <h3 class="text-xl font-bold mb-2">Vegetable Stir Fry</h3>
+        <p class="text-gray-600 mb-4">A healthy and colorful stir fry with mixed vegetables and soy sauce.</p>
+        <button onclick="openModal('stirFryModal')" class="text-blue-600 hover:underline">
+          <span data-feather="info" class="inline-block mr-2"></span> View Recipe
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals -->
+  <!-- Spaghetti Carbonara Modal -->
+  <div id="carbonaraModal" class="modal hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg w-3/4 max-w-2xl">
+      <h3 class="text-2xl font-semibold">Spaghetti Carbonara</h3>
+      <p class="text-gray-600 mt-4">A classic Italian pasta dish with eggs, cheese, pancetta, and pepper. This is a quick and easy recipe that is perfect for a cozy dinner.</p>
+      <img src="images/Spaghetti Carbonara.jpeg" alt="Spaghetti Carbonara" class="rounded-lg mt-4 mb-4 w-full h-48 object-cover">
+      <button onclick="closeModal('carbonaraModal')" class="text-red-500 hover:underline mt-4">Close</button>
+    </div>
+  </div>
+
+  <!-- Chicken Alfredo Modal -->
+  <div id="alfredoModal" class="modal hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg w-3/4 max-w-2xl">
+      <h3 class="text-2xl font-semibold">Chicken Alfredo</h3>
+      <p class="text-gray-600 mt-4">A creamy and savory pasta dish with grilled chicken and Alfredo sauce. The richness of the sauce combined with tender chicken is a must-try!</p>
+      <img src="images/Chicken Alfredo.jpeg" alt="Chicken Alfredo" class="rounded-lg mt-4 mb-4 w-full h-48 object-cover">
+      <button onclick="closeModal('alfredoModal')" class="text-red-500 hover:underline mt-4">Close</button>
+    </div>
+  </div>
+
+  <!-- Vegetable Stir Fry Modal -->
+  <div id="stirFryModal" class="modal hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-6 rounded-lg w-3/4 max-w-2xl">
+      <h3 class="text-2xl font-semibold">Vegetable Stir Fry</h3>
+      <p class="text-gray-600 mt-4">A healthy and colorful stir fry with mixed vegetables and soy sauce. This is a great option for vegetarians or anyone looking for a light, healthy meal.</p>
+      <img src="images/Vegetable Stir Fry.jpeg" alt="Vegetable Stir Fry" class="rounded-lg mt-4 mb-4 w-full h-48 object-cover">
+      <button onclick="closeModal('stirFryModal')" class="text-red-500 hover:underline mt-4">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    feather.replace(); // Initialize Feather icons
+  </script>
+<script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
