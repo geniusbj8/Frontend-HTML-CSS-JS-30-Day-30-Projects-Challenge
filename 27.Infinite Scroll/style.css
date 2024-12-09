@@ -1,0 +1,75 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.item {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  color: #555;
+  display: none;
+}
+
+/* Custom Scrollbar */
+#scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+#scrollbar::before {
+  content: '';
+  width: 100%;
+  background: #3b82f6;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+#scrollbar:hover::before {
+  background: #2563eb; /* Darker shade when hovered */
+}
+
+/* Scrollbar's thumb adjustment */
+#scrollbar::before {
+  height: 50px;
+  background: #4f7bf2;
+}
+
+#scrollbar:hover::before {
+  background: #2563eb;
+}

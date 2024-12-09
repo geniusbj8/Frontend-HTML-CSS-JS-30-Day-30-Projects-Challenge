@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Filter Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center text-3xl font-semibold mb-6">Image Filter Application</h1>
+
+    <!-- Image Upload Section -->
+    <div class="upload-section text-center">
+      <input type="file" id="imageUpload" accept="image/*" onchange="loadImage(event)">
+    </div>
+
+    <!-- Image Display Section -->
+<div class="image-section mt-6">
+  <div class="image-container">
+    <img id="image" src="" alt="Uploaded Image" class="image" />
+  </div>
+</div>
+
+
+    <!-- Filter Controls Section -->
+    <div class="filters-section mt-6 text-center">
+      <button onclick="applyFilter('grayscale')" class="filter-btn">Grayscale</button>
+      <input id="grayscaleRange" type="range" min="0" max="100" value="0" class="filter-range" onchange="updateFilter('grayscale')">
+      
+      <button onclick="applyFilter('sepia')" class="filter-btn">Sepia</button>
+      <input id="sepiaRange" type="range" min="0" max="100" value="0" class="filter-range" onchange="updateFilter('sepia')">
+
+      <button onclick="applyFilter('invert')" class="filter-btn">Invert</button>
+      <input id="invertRange" type="range" min="0" max="100" value="0" class="filter-range" onchange="updateFilter('invert')">
+      
+      <button onclick="applyFilter('contrast')" class="filter-btn">Contrast</button>
+      <input id="contrastRange" type="range" min="0" max="200" value="100" class="filter-range" onchange="updateFilter('contrast')">
+      
+      <button onclick="removeFilter()" class="filter-btn">Remove Filter</button>
+      
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

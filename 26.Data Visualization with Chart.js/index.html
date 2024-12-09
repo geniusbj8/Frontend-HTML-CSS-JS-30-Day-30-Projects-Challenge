@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Visualization with Chart.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #f3f4f6;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .chart-container {
+      width: 80%;
+      max-width: 600px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Data Visualization with Chart.js</h1>
+
+  <div class="chart-container">
+    <canvas id="barChart"></canvas>
+  </div>
+
+  <div class="chart-container">
+    <canvas id="pieChart"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

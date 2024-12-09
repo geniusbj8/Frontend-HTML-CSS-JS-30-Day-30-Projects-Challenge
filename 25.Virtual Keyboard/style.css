@@ -1,0 +1,85 @@
+/* General styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #74ebd5;
+}
+
+.virtual-keyboard {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.key {
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  color: white;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.key:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.key.special {
+  background: #ff7eb3;
+}
+
+.key.caps-on {
+  background: #ff7eb3;
+}
+
+.key.space {
+  grid-column: span 4;
+}
+
+@media (max-width: 500px) {
+  .virtual-keyboard {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

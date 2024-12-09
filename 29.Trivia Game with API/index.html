@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trivia Game</h1>
+    <div id="question-container">
+      <p id="question-text"></p>
+      <div id="answer-options">
+        <!-- Options will be dynamically inserted here -->
+      </div>
+      <button id="next-question" onclick="nextQuestion()">Next Question</button>
+      <button id="continue" onclick="loadNextSet()" class="hidden">Continue</button>
+      <button id="restart" onclick="restartGame()" class="hidden">Restart</button>
+    </div>
+    <div id="feedback"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

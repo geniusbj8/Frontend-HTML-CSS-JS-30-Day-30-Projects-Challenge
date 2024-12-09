@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Previewer</title>
+  <!-- Load markdown.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js" integrity="sha512-kaDP6dcDG3+X87m9SnhyJzwBMKrYnd2tLJjGdBrZ9yEL8Zcl2iJRsPwylLkbd2g3QC5S8efV3sgwI5r73U0HnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Markdown Previewer</h1>
+
+    <div class="editor-container">
+      <textarea id="markdownInput" placeholder="Enter Markdown text here..."></textarea>
+    </div>
+
+    <div class="preview-container">
+      <div id="markdownPreview"></div>
+    </div>
+  </div>
+
+  <!-- Load your custom script.js -->
+  <script src="script.js"></script>
+</body>
+</html>

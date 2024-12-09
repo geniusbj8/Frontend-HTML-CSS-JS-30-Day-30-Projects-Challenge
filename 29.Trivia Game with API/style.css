@@ -1,0 +1,176 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Question Text */
+#question-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Answer Options */
+#answer-options {
+  margin-bottom: 30px;
+}
+
+.option {
+  background-color: #282c34;
+  color: white;
+  font-size: 1.2em;
+  margin: 10px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #575757;
+}
+
+.option.selected {
+  background-color: #28a745;
+}
+
+.option.correct {
+  background-color: #007bff;
+}
+
+.option.incorrect {
+  background-color: #dc3545;
+}
+
+#next-question {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+  margin-top: 10px;
+}
+
+#next-question:hover {
+  background-color: #0056b3;
+}
+
+#next-question:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Feedback */
+#feedback {
+  font-size: 1.5em;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.correct {
+  background-color: #28a745;
+  color: white;
+}
+
+.wrong {
+  background-color: #dc3545;
+  color: white;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+
+/* New Buttons for Restart and Continue */
+#continue, #restart {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 50%;
+  margin-top: 10px;
+  display: none;
+}
+
+#continue:hover, #restart:hover {
+  background-color: #218838;
+}
+
+#continue:disabled, #restart:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Hidden Class */
+.hidden {
+  display: none;
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .option {
+    font-size: 1em;
+  }
+
+  #next-question {
+    font-size: 1em;
+  }
+}
